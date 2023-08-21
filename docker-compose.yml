@@ -1,0 +1,25 @@
+version: '3.7'
+
+x-default-labels: &default-labels
+  image.author.company: Maze Capital
+  image.author.website: https://www.maze.capital
+  image.author.email: dev@maze.capital
+
+services:
+  js-build:
+    restart: unless-stopped
+    build:
+      context: ./
+      ssh:
+        - default
+      args:
+        NODE_ENV: development
+    volumes:
+      - ./:/usr/local/src/project/protobufjs-nestjs-protoloader
+    labels:
+      <<: *default-labels
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M

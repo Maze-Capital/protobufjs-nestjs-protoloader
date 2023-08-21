@@ -1,0 +1,33 @@
+{
+  "name": "@maze.capital/protobufjs-nestjs-protoloader",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "UNLICENSED",
+  "scripts": {
+    "compile": "tsc --project .",
+    "compile:dev": "tsc --project . -w",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^16.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "eslint": "^8.20.0",
+    "ts-proto": "^1.155.1",
+    "typescript": "^4.9.5",
+    "protobufjs": "^7.2.4",
+    "@grpc/proto-loader": "^0.7.8",
+    "class-transformer": "^0.5.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.16 <19"
+  },
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "main": "dist/index.js"
+}

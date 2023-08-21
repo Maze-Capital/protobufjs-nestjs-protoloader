@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  js-build:
+    build:
+      target: development
+    volumes:
+      - node_modules-data:/usr/local/src/project/protobufjs-nestjs-protoloader/node_modules
+
+volumes:
+  node_modules-data:
